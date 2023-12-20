@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang"en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <h1> Merry Christmas! </h1>
+
+    </header>
+    <main>
+        <h2> and Happy Holidays! </h2>
+        <p> see you next year! </p>
+    </main>
+    <footer>
+        &copy; Clara Mendiola <x-fullyear></x-fullyear>
+        
+        <script>
+            class YearElement extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = new Date().getFullYear();
+    }
+}
+
+customElements.define("x-fullyear", YearElement);
+        </script>
+    </footer>
+
+</body>
+
+</html>
